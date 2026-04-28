@@ -1,0 +1,39 @@
+ANALISA TRANSFORMASI CITRA GRAYSCALE
+
+1. Perbedaan Persebaran Nilai Keabuan:
+
+- Citra Asli:
+  Histogram menunjukkan distribusi nilai keabuan asli dari gambar. Jika citra gelap, maka histogram cenderung menumpuk di nilai rendah (dekat 0).
+
+- Citra Negatif:
+  Transformasi negatif membalik nilai keabuan (F → 255 - F).
+  Akibatnya:
+  - Area gelap menjadi terang
+  - Area terang menjadi gelap
+  - Histogram juga terbalik secara horizontal
+
+- Citra Logaritmik:
+  Transformasi logaritmik memperluas nilai intensitas rendah dan menekan nilai tinggi.
+  Akibatnya:
+  - Detail pada area gelap lebih terlihat
+  - Area terang menjadi lebih homogen
+  - Histogram cenderung menyebar di bagian kiri (nilai rendah diperbesar)
+
+2. Kapan Transformasi Logaritmik Lebih Bermanfaat?
+
+Transformasi logaritmik lebih bermanfaat ketika:
+- Citra memiliki banyak area gelap
+- Detail penting tersembunyi di bagian gelap
+- Ingin meningkatkan kontras pada intensitas rendah
+
+Contoh:
+- Citra medis (X-ray)
+- Citra astronomi
+- Foto dengan pencahayaan rendah
+
+Sedangkan transformasi negatif lebih cocok digunakan untuk:
+- Menonjolkan detail pada area terang
+- Aplikasi tertentu seperti analisis citra medis (misalnya tulang)
+
+Kesimpulan:
+Transformasi negatif hanya membalik intensitas, sedangkan transformasi logaritmik meningkatkan detail terutama pada area gelap.
