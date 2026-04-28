@@ -1,0 +1,38 @@
+ANALISA KONVOLUSI FILTER
+
+1. Perbandingan Visual dan Nilai Rata-rata Piksel:
+
+- Citra Original:
+  Menampilkan citra asli tanpa perubahan. Nilai rata-rata mencerminkan intensitas keseluruhan.
+
+- Low Pass Filter  (LPF):
+  Citra menjadi lebih halus (blur).
+  Detail kecil dan noise berkurang.
+  Nilai rata-rata biasanya tidak berubah jauh karena hanya meratakan intensitas.
+
+- High Pass Filter (HPF):
+  Menonjolkan tepi dan detail.
+  Area datar menjadi gelap.
+  Nilai rata-rata cenderung lebih kecil karena banyak piksel menjadi mendekati nol.
+
+- Band Pass Filter (BPF):
+  Citra menjadi lebih tajam.
+  Tepi lebih jelas tetapi tetap mempertahankan struktur asli.
+  Nilai rata-rata relatif mendekati citra asli.
+
+2. Hubungan Domain Spasial dan Domain Frekuensi:
+
+- LPF (Low Pass Filter):
+  Di domain spasial  : melakukan perataan (blur).
+  Di domain frekuensi: melewatkan frekuensi rendah dan menahan frekuensi tinggi.
+
+- HPF (High Pass Filter):
+  Di domain spasial  : menonjolkan tepi.
+  Di domain frekuensi: melewatkan frekuensi tinggi dan menahan frekuensi rendah.
+
+- BPF (Band Pass Filter):
+  Di domain spasial  : meningkatkan ketajaman.
+  Di domain frekuensi: melewatkan frekuensi menengah, menahan frekuensi terlalu rendah dan terlalu tinggi.
+
+Kesimpulan:
+LPF cocok untuk reduksi noise, HPF untuk deteksi tepi, dan BPF untuk penajaman citra.
